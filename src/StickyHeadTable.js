@@ -97,9 +97,9 @@ export default function StickyHeadTable(props) {
                                         const value = team[column.id];
                                         if (column.id === 'name') {
                                             return (
-                                                <TableCell key={column.id} align={column.align} class="cell">
+                                                <TableCell key={column.id} align={column.align} className="cell">
                                                     <span><strong>{ team.position }</strong></span>
-                                                    <img class="logo" src={ decodeURI(team.logo) }/>
+                                                    <img className="logo" src={ decodeURI(team.logo) }/>
                                                     <span>{ value }</span>
                                                 </TableCell>
                                             );

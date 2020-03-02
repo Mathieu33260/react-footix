@@ -3,6 +3,8 @@ import Menu from "./Menu";
 import Classement from "./Classement/Classement";
 import Teams from "./Teams/Teams";
 import Players from "./Players/Players";
+import Chart from './Chart/Chart'
+import MapCustom from "./Map/Map";
 
 class Container extends React.PureComponent {
     constructor(props) {
@@ -29,9 +31,17 @@ class Container extends React.PureComponent {
                 return (
                     <Players league={ this.props.league }/>
                 );
+            case 'Graphique':
+                return (
+                    <Chart league={ this.props.league }/>
+                );
+            case 'Carte':
+                return (
+                    <MapCustom league={ this.props.league }/>
+                );
             default:
                 return (
-                    <Classement league={ this.props.league }/>
+                    <MapCustom league={ this.props.league }/>
                 );
         }
     }

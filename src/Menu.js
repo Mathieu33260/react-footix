@@ -22,7 +22,7 @@ function Menu (props) {
     const [state, setState] = React.useState({
         left: false,
     });
-    const [currentTab, setCurrentTab] = useState('Classement');
+    const [currentTab, setCurrentTab] = useState('Carte');
 
     const toggleDrawer = (side, open) => event => {
         if (event && event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -45,7 +45,7 @@ function Menu (props) {
             onKeyDown={toggleDrawer(side, false)}
         >
             <List>
-                {['Classement', 'Equipes', 'Meilleurs buteurs'].map((text, index) => (
+                {['Classement', 'Equipes', 'Meilleurs buteurs', 'Graphique', 'Carte'].map((text, index) => (
                     <ListItem button key={text} onClick={ () => onClickSetCurrentTab(text)  }>
                         <ListItemText primary={text} />
                     </ListItem>
